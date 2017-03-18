@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+	<meta http-equiv="Cache-Control" content="no-siteapp">
+	<meta name="render" content="webkit">
+  <title>CSS-Layout</title>
+  <link rel="stylesheet" href="static/css/jquery.fullpage.min.css">
+  <link rel="stylesheet" href="static/css/style.css">
+</head>
+<body>
+  <div id="warpper">
+    <div class="section section1">
+      <div class="section-warpper">
+        <h1>CSS布局</h1>
+      </div>
+    </div>
+    <div class="section section2">
+      <div class="section-warpper">
+        <h1>盒模型</h1>
+        <img class="pull-left" src="static/imgs/boxmodel.png" style="width: 600px;" onclick="return changePicture(this)">
+        <img class="pull-left hidden" src="static/imgs/gallery.jpg" style="width: 600px;">
+        <div class="demo-boxmodel pull-left">哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈</div>
+        <ul class="pull-left">
+          <li>content</li>
+          <li>padding</li>
+          <li>border</li>
+          <li>margin</li>
+        </ul>
+      </div>
+    </div>
+    <div class="section section3">
+      <div class="section-warpper">
+        <style contenteditable></style>
+        <div class="demo-box" contenteditable></div>
+      </div>
+    </div>
+    <div class="section section4">
+      <div class="section-warpper">
+        <h1>box-sizing</h1>
+        <p>人们想把width同时作用于content,padding,border</p>
+        <p>代代相传的传统方法 按计算器</p>
+        <p>现代方法 box-sizing: border-box</p>
+      </div>
+    </div>
+    <div class="section section5">
+      <div class="section-warpper">
+        <h1>display</h1>
+        <h2>块级元素，行内元素</h2>
+        <p class="demo-div">div 是一个标准的块级元素。一个块级元素会新开始一行并且尽可能撑满容器。</p>
+        <p>span 是一个标准的行内元素。一个行内元素可以在段落中<span class="demo-span">&lt;span&gt;像这样&lt;/span&gt;</span>
+           包裹一些文字而不会打乱段落的布局。</p>
+        <style contenteditable></style>
+      </div>
+    </div>
+    <div class="section section6">
+      <div class="section-warpper">
+        <h1>float</h1>
+        <p> float 属性可以使一个元素脱离正常的文档流，然后被安放到它所在容器的的左端或者右端，
+          并且其他的文本和行内元素环绕它。</p>
+        <img src="static/imgs/floats.png" style="width: 60%;">
+        <p class="pull-right" style="width: 36%; margin: 0">向左或者向右平移，一直平移直到碰到了所处的容器的边框，
+          或者碰到另外一个浮动的元素。</p>
+      </div>
+    </div>
+    <div class="section section7">
+      <div class="section-warpper">
+        <h1>clear</h1>
+        <p>The clear CSS property specifies whether an element can be next to floating elements
+           that precede it or must be moved down (cleared) below them.</p>
+        <p>When applied to non-floating blocks, it moves the border edge of the element down
+           until it is below the margin edge of all relevant floats.</p>
+        <div class="demo-black"></div>
+        <div class="demo-red"></div>
+        <div class="demo-white"></div>
+        <style contenteditable></style>
+      </div>
+    </div>
+    <div class="section section8">
+      <div class="section-warpper">
+        <h1>clearfix hack</h1>
+        <div class="clearfix demo-clearfix">
+          <img src="static/imgs/example.jpg" class="pull-right" style="width: 50%;">
+          <p>这个图片比包含它的元素还高， 而且它是浮动的，于是它就溢出到了容器外面！</p>
+        </div>
+        <style contenteditable></style>
+      </div>
+    </div>
+    <div class="section section9">
+      <div class="section-warpper">
+        <h1>position</h1>
+        <h2>static</h2>
+        <p>默认值。一个 static 元素表示它不会被“positioned”，一个 position 属性被设置
+        为其他值的元素表示它会被“positioned”。</p>
+        <h2>relative</h2>
+        <p class="demo-relative">relative 表现的和 static 一样，除非你添加了一些额外的属性。</p>
+        <p>其他的元素的位置则不会发生位置改变，来弥补空隙。</p>
+        <style contenteditable></style>
+      </div>
+    </div>
+    <div class="section section10">
+      <div class="section-warpper">
+        <h1>position续</h1>
+        <h2>absolute</h2>
+        <p>相对于最近的“positioned”祖先元素定位。如果该元素没有“positioned”祖先元素，那么它
+          是相对于文档的 body 元素定位。</p>
+        <div class="demo-positioned"><div class="demo-absolute"></div></div>
+        <style contenteditable></style>
+      </div>
+    </div>
+    <div class="section section11">
+      <div class="section-warpper">
+        <h1>z-index</h1>
+        <p>HTML元素在一条假想的相对于面向（电脑屏幕的）视窗或者网页的z轴上延伸，它们
+        依据其自身属性按照优先级顺序占用层叠上下文的空间。</p>
+        <img src="static/imgs/zindex.png" class="pull-left">
+        <ul>
+          <li>DIV #2 - z-index 为 2</li>
+          <li>DIV #3 - z-index 为 4
+            <ul>
+              <li>DIV #5 - z-index 为 1，在一个 z-index 为 4 的元素内层叠，所以渲染次序为 4.1</li>
+              <li>DIV #6 - z-index 为 3，在一个 z-index 为 4 的元素内层叠，所以渲染次序为 4.3</li>
+              <li>DIV #4 - z-index 为 6，在一个 z-index 为 4 的元素内层叠，所以渲染次序为 4.6</li>
+            </ul>
+          </li>
+          <li>DIV #1 - z-index 为 5</li>
+        </ul>
+      </div>
+    </div>
+    <div class="section section12">
+      <div class="section-warpper">
+        <h1>媒体查询</h1>
+        <p>为了实现响应式设计，我们使用百分比宽度来布局。
+        让内容的呈现根据可以根据设备进行变化，而不需改变内容本身。</p>
+        <div class="demo-media"></div>
+        <div class="media-code">
+          <pre>
+.demo-media {
+  width: 50%;
+}
+@media screen and (max-width:600px) {
+  .demo-media {
+    width: 100%;
+  }
+}
+          </pre>
+        </div>
+      </div>
+    </div>
+    <div class="section section13">
+      <div class="section-warpper">
+        <h1>CSS框架</h1>
+        <div class="img-container">
+          <img src="static/imgs/bootstrap.jpg" style="width: 49%">
+          <img src="static/imgs/elasticss.jpg" style="width: 49%">
+        </div>
+      </div>
+    </div>
+    <div class="section section14">
+      <div class="section-warpper">
+        <h1 onclick="seeU(this)">任何问题？</h1>
+      </div>
+    </div>
+  </div>
+  <script src="static/js/jquery.min.js"></script>
+  <script src="static/js/jquery.fullpage.min.js"></script>
+  <script src="static/js/frame.js"></script>
+</body>
+</html>
